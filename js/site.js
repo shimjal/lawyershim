@@ -14,6 +14,35 @@
   });
 })();
 
+// Featured cases: 2 military + 2 franchise + 1 each from two of the other groups, picked at random
+(function () {
+  var grid = document.getElementById('featured');
+  if (!grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.case'));
+  var btn = document.getElementById('featured-shuffle');
+
+  function pick(group, n) {
+    var pool = cards.filter(function (c) { return c.dataset.group === group; });
+    for (var i = pool.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = pool[i]; pool[i] = pool[j]; pool[j] = t;
+    }
+    return pool.slice(0, n);
+  }
+
+  function render() {
+    var others = ['sex', 'criminal', 'civil'];
+    others.splice(Math.floor(Math.random() * others.length), 1);
+    var chosen = pick('military', 2).concat(pick('franchise', 2), pick(others[0], 1), pick(others[1], 1));
+    cards.forEach(function (c) { c.hidden = chosen.indexOf(c) === -1; });
+    chosen.forEach(function (c) { grid.appendChild(c); });
+  }
+
+  btn.hidden = false;
+  btn.addEventListener('click', render);
+  render();
+})();
+
 // FAQ: show a random handful of questions; all of them stay in the HTML for search engines
 (function () {
   var list = document.getElementById('faq-list');

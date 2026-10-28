@@ -128,7 +128,8 @@ section.block { padding: 88px 0 0; }
 .case-foot { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 13px; color: var(--ink-3); }
 .case-foot a { color: var(--gold-ink); font-weight: 700; text-decoration: none; }
 .case-foot a:hover { text-decoration: underline; }
-.center-cta { text-align: center; margin-top: 28px; }
+.center-cta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+button.btn { cursor: pointer; font: inherit; font-weight: 700; font-size: 15.5px; }
 
 /* Career */
 .career { display: grid; grid-template-columns: 300px 1fr; gap: 48px; }
