@@ -1,7 +1,9 @@
 // Google Ads: report clicks on phone / LawTalk / email links.
 // Fill in a label ('AW-18543989101/xxxx') once the matching conversion action exists in Google Ads.
 (function () {
-  var LABELS = { phone: '', lawtalk: '', email: '' };
+  // All three buttons count toward the single '상담문의 클릭' conversion action
+  var INQUIRY = 'AW-18543989101/0s7hCJXFh64dEO2iu4pF';
+  var LABELS = { phone: INQUIRY, lawtalk: INQUIRY, email: INQUIRY };
   function kind(a) {
     var href = a.getAttribute('href') || '';
     if (href.indexOf('tel:') === 0) return 'phone';
@@ -15,7 +17,8 @@
     var k = kind(a);
     if (!k) return;
     gtag('event', k + '_click', { link_url: a.href });
-    if (LABELS[k]) gtag('event', 'conversion', { send_to: LABELS[k] });
+    // tel:/mailto:/new-tab links keep this page open, so a beacon is enough (no redirect callback)
+    if (LABELS[k]) gtag('event', 'conversion', { send_to: LABELS[k], transport_type: 'beacon' });
   });
 })();
 
