@@ -1,3 +1,14 @@
+// Case detail pages always open at the title, not at a remembered scroll position
+(function () {
+  if (!document.querySelector('.detail-hero') || location.hash) return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  // 'instant' so the page's smooth-scroll CSS doesn't animate (and get interrupted)
+  function top() { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }
+  top();
+  window.addEventListener('load', top);
+  window.addEventListener('pageshow', top);
+})();
+
 (function () {
   var btn = document.querySelector('.menu-btn');
   var nav = document.getElementById('nav');

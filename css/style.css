@@ -195,6 +195,35 @@ button.btn { cursor: pointer; font: inherit; font-weight: 700; font-size: 15.5px
 .site-footer p { margin: 0 0 6px; }
 .site-footer b { color: var(--on-dark); }
 
+/* Case detail page */
+.detail-hero { padding: 48px 0 40px; }
+.crumbs { margin: 0 0 16px; font-size: 14px; color: var(--on-dark-2); }
+.crumbs a { color: var(--on-dark-2); text-decoration: none; }
+.crumbs a:hover { color: #fff; }
+.detail-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 14px; font-size: 14px; color: var(--on-dark-2); }
+.detail-meta .cat { color: var(--on-dark-2); }
+.detail { max-width: 820px; padding-top: 16px; }
+.detail section { padding-top: 40px; }
+.detail h2 { display: flex; align-items: baseline; gap: 12px; font-size: 22px; margin: 0 0 14px; letter-spacing: -.015em; }
+.detail h2 span { font-size: 13px; font-weight: 800; color: var(--gold-ink); }
+.detail p { margin: 0; font-size: 16.5px; color: var(--ink-2); }
+.detail-list, .detail-steps { margin: 0; padding-left: 22px; display: grid; gap: 10px; font-size: 16.5px; color: var(--ink-2); }
+.detail-list li::marker { color: var(--gold); }
+.detail-steps li::marker { color: var(--gold-ink); font-weight: 700; }
+.detail-result { background: var(--win-soft); color: var(--ink) !important; border-left: 3px solid var(--win); padding: 16px 20px; border-radius: 0 10px 10px 0; font-weight: 500; }
+.doc { margin: 18px 0 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
+.doc img { width: auto; max-width: 100%; margin: 0 auto; }
+.original { margin-top: 20px; padding: 18px 20px; border: 1px dashed var(--line); border-radius: 12px; background: var(--surface); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; }
+.original p { flex: 1 1 320px; font-size: 14.5px !important; color: var(--ink-3) !important; }
+.original .btn { padding: 10px 18px; font-size: 14.5px; white-space: nowrap; }
+.detail-similar .faq { margin-top: 18px; }
+.detail-cta { margin-top: 24px; background: var(--dark); color: var(--on-dark); border-radius: 16px; padding: 26px; display: grid; gap: 18px; }
+.detail-cta b { font-size: 19px; display: block; margin-bottom: 6px; }
+.detail-cta p { color: var(--on-dark-2); font-size: 15px; }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.detail-back { margin-top: 32px !important; }
+.detail-back a { color: var(--gold-ink); font-weight: 700; text-decoration: none; }
+
 /* Cases page */
 .page-hero { background: var(--dark); color: var(--on-dark); padding: 64px 0 48px; }
 .page-hero h1 { font-size: clamp(28px, 4vw, 42px); margin: 0 0 12px; letter-spacing: -.02em; line-height: 1.25; }
