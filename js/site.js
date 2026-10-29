@@ -1,3 +1,24 @@
+// Google Ads: report clicks on phone / LawTalk / email links.
+// Fill in a label ('AW-18543989101/xxxx') once the matching conversion action exists in Google Ads.
+(function () {
+  var LABELS = { phone: '', lawtalk: '', email: '' };
+  function kind(a) {
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) return 'phone';
+    if (href.indexOf('mailto:') === 0) return 'email';
+    if (href.indexOf('lawtalk.co.kr/directory/profile') !== -1) return 'lawtalk';
+    return null;
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || typeof gtag !== 'function') return;
+    var k = kind(a);
+    if (!k) return;
+    gtag('event', k + '_click', { link_url: a.href });
+    if (LABELS[k]) gtag('event', 'conversion', { send_to: LABELS[k] });
+  });
+})();
+
 // Case detail pages always open at the title, not at a remembered scroll position
 (function () {
   if (!document.querySelector('.detail-hero') || location.hash) return;
