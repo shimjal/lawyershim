@@ -261,7 +261,9 @@ button.btn { cursor: pointer; font: inherit; font-weight: 700; font-size: 15.5px
 }
 @media (max-width: 620px) {
   .wrap { padding: 0 16px; }
-  .brand span { display: none; }
+  .brand { flex-direction: column; align-items: flex-start; gap: 1px; line-height: 1.25; }
+  .brand b { font-size: 17px; }
+  .brand span { font-size: 11.5px; }
   .header-cta { padding: 8px 12px; font-size: 13px; }
   section.block { padding-top: 64px; }
   .pcard { padding: 24px 20px; }
