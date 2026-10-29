@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shimjal.github.io/lawyershim/sitemap.xml
+Sitemap: https://lawyershim.com/sitemap.xml

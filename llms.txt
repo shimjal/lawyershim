@@ -13,9 +13,9 @@
 - 이메일: lawfirm_di@naver.com
 
 ## 페이지
-- [홈](https://shimjal.github.io/lawyershim/): 소개, 업무분야, 대표 사례, 경력, 언론, FAQ
-- [성공사례](https://shimjal.github.io/lawyershim/cases.html): 해결사례 137건 전체 (분야별)
-- [법률가이드](https://shimjal.github.io/lawyershim/guides.html): 가맹본부 자문(공정위 소명, 해지절차, 위약금, 특수상권, 네트워크 병원), 군형법·징계 가이드와 에세이 21편
+- [홈](https://lawyershim.com/): 소개, 업무분야, 대표 사례, 경력, 언론, FAQ
+- [성공사례](https://lawyershim.com/cases.html): 해결사례 137건 전체 (분야별)
+- [법률가이드](https://lawyershim.com/guides.html): 가맹본부 자문(공정위 소명, 해지절차, 위약금, 특수상권, 네트워크 병원), 군형법·징계 가이드와 에세이 21편
 - 홈의 자주 묻는 질문(FAQ) 36개: 군형사, 프랜차이즈·가맹사업법, 형사, 민사·행정
 - [네이버 블로그](https://blog.naver.com/lawfirm_di)
 - [로톡 프로필](https://www.lawtalk.co.kr/directory/profile/0456-%EC%8B%AC%EC%A0%9C%EC%9B%90)
