@@ -931,6 +931,9 @@
 
   var initial = (location.hash || '').replace('#', '');
   if (initial && document.querySelector('.tab[data-filter="' + initial + '"]')) current = initial;
+  // ?q=검색어 pre-fills the search box (e.g. cases.html?q=소년#criminal)
+  var preset = new URLSearchParams(location.search).get('q');
+  if (preset) q.value = preset;
 
   function apply() {
     var term = q.value.trim().toLowerCase();
