@@ -293,3 +293,7 @@ button.btn { cursor: pointer; font: inherit; font-weight: 700; font-size: 15.5px
   .tab { flex: 0 0 auto; }
   .toolbar { top: 64px; }
 }
+
+/* 휴대폰에서만 제목 줄바꿈 */
+.m-br { display: none; }
+@media (max-width: 520px) { .m-br { display: inline; } }
